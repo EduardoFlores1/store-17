@@ -1,0 +1,5 @@
+<div class="contenedor">
+  @for (product of products(); track $index) {
+    <app-product [product]="product" />
+  }
+</div>

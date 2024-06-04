@@ -1,0 +1,10 @@
+.contenedor {
+  width: 90%;
+  margin: auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 32px;
+}

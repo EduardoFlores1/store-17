@@ -1,0 +1,11 @@
+.contenedor {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .imagen {
+    width: 50%;
+    height: 190px;
+    align-self: center;
+  }
+}

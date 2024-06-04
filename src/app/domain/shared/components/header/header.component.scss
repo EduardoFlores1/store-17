@@ -1,0 +1,30 @@
+.contenedor {
+  min-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--verde);
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .titulo {
+      color: var(--negro);
+    }
+  }
+
+  .menus {
+    display: flex;
+    gap: 50px;
+    .menu {
+      text-decoration: none;
+      color: var(--negro);
+      font-size: 18px;
+    }
+    .menu:hover {
+      color: var(--rosa);
+    }
+  }
+}
