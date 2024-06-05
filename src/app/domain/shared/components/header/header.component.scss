@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: space-around;
   background-color: var(--verde);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 3px 3px 4px rgb(0,0,0,0.2);
 
   .logo {
     display: flex;

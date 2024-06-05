@@ -1,11 +1,46 @@
 .contenedor {
-  height: 500px;
+  height: 400px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   .imagen {
     width: 50%;
-    height: 190px;
+    height: 160px;
     align-self: center;
+  }
+  .cuerpo {
+    .detalle {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 25px;
+      .price {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--negro);
+      }
+      .rate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        color: var(--gris);
+
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .acciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    .boton {
+      color: white;
+      background-color: var(--azul);
+      padding: 4px 16px;
+    }
   }
 }
