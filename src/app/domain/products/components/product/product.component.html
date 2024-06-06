@@ -1,6 +1,6 @@
 <mat-card class="contenedor">
   <mat-card-header class="cabecera">
-    <mat-card-title>{{product.title | limitText}}</mat-card-title>
+    <mat-card-title>{{product.title | limitText: 46}}</mat-card-title>
     <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
   </mat-card-header>
   <img class="imagen" mat-card-image [src]="product.image" alt="Photo of a Shiba Inu">
@@ -13,7 +13,7 @@
       <span class="price">{{product.price | currency:'S/ ':'symbol':'1.0'}}</span>
     </mat-card-content>
     <mat-card-actions class="acciones">
-      <button class="boton" mat-button>Add to cart</button>
+      <button (click)="addToCartHandler()" class="boton" mat-button>Add to cart</button>
     </mat-card-actions>
   </div>
 </mat-card>

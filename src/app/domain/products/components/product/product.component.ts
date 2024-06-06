@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
@@ -16,5 +16,10 @@ import { LimitTextPipe } from '../../../shared/pipes/limit-text.pipe';
 export class ProductComponent {
 
   @Input({required: true}) product!: Product;
+  @Output() addToCart = new EventEmitter();
+
+  addToCartHandler(): void {
+    this.addToCart.emit(this.product);
+  }
 
 }

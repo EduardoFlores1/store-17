@@ -6,10 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class LimitTextPipe implements PipeTransform {
 
-  transform(titulo: string): string {
+  transform(titulo: string, maxLength: number = 46): string {
     let newText = '';
-    if(titulo.length > 46) {
-      newText = `${titulo.substring(0, 46)}...`;
+    if(titulo.length > maxLength) {
+      newText = `${titulo.substring(0, maxLength)}...`;
     }else {
       newText = titulo;
     }

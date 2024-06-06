@@ -3,6 +3,7 @@ import { ProductComponent } from '../../components/product/product.component';
 import { ProductService } from '../../../shared/services/product.service';
 import { Product } from '../../../shared/models/product.interface';
 import { Subscription } from 'rxjs';
+import { CartService } from '../../../shared/services/cart.service';
 
 @Component({
   selector: 'app-list',
@@ -14,6 +15,7 @@ import { Subscription } from 'rxjs';
 export class ListComponent {
 
   private _productService = inject(ProductService);
+  private _cartService = inject(CartService);
 
 
   subs!: Subscription;
@@ -37,6 +39,10 @@ export class ListComponent {
         console.log(err)
       },
     });
+  }
+
+  addToCart(product: Product): void {
+    this._cartService.addToCart(product);
   }
 
 }

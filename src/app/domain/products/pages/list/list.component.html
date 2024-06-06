@@ -1,5 +1,5 @@
 <div class="contenedor">
   @for (product of products(); track $index) {
-    <app-product [product]="product" />
+    <app-product [product]="product" (addToCart)="addToCart($event)"/>
   }
 </div>
