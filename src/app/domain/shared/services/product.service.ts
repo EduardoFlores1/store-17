@@ -14,4 +14,12 @@ export class ProductService {
   getProducts() {
     return this._http.get<Product[]>(this.URL);
   }
+
+  getProductsByCategory(categorySelected?: string) {
+    if(categorySelected) {
+      return this._http.get<Product[]>(`${this.URL}/category/${categorySelected}`);
+    }else {
+      return this._http.get<Product[]>(this.URL);
+    }
+  }
 }
