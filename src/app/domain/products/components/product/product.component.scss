@@ -4,10 +4,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .imagen {
-    width: 50%;
-    height: 160px;
+  .enlace_imagen {
+    display: flex;
     align-self: center;
+    justify-content: center;
+    width: 100%;
+    .imagen {
+      width: 50%;
+      height: 160px;
+    }
   }
   .cuerpo {
     .detalle {

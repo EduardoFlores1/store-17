@@ -3,7 +3,9 @@
     <mat-card-title>{{product.title | limitText: 46}}</mat-card-title>
     <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
   </mat-card-header>
-  <img class="imagen" mat-card-image [src]="product.image" alt="Photo of a Shiba Inu">
+  <a class="enlace_imagen" [routerLink]="['product', product.id]">
+    <img class="imagen" mat-card-image [src]="product.image" alt="Photo of a Shiba Inu">
+  </a>
   <div class="cuerpo">
     <mat-card-content class="detalle">
       <div class="rate">

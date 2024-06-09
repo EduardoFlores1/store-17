@@ -5,11 +5,12 @@ import {MatIconModule} from '@angular/material/icon';
 import { Product } from '../../../shared/models/product.interface';
 import { CommonModule } from '@angular/common';
 import { LimitTextPipe } from '../../../shared/pipes/limit-text.pipe';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatCardModule, MatIconModule, LimitTextPipe],
+  imports: [RouterLink ,CommonModule, MatButtonModule, MatCardModule, MatIconModule, LimitTextPipe],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })

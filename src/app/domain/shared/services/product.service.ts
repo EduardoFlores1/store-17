@@ -22,4 +22,8 @@ export class ProductService {
       return this._http.get<Product[]>(this.URL);
     }
   }
+
+  getOneProduct(id: number) {
+    return this._http.get<Product>(`${this.URL}/${id}`);
+  }
 }
