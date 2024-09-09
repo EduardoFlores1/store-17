@@ -44,6 +44,13 @@
     .derecha {
       width: 65%;
       height: 100%;
+
+      .pie {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin-top: 15px;
+      }
     }
   }
 }
