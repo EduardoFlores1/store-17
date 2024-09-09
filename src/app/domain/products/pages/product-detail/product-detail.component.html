@@ -1,0 +1,23 @@
+<div class="contenedor">
+  <div class="principal">
+    <div class="izquierda">
+      <img class="img_gigante" [src]="product()?.image">
+      <div class="img_lista">
+        <img class="img_lista_unidad" [src]="product()?.image">
+        <img class="img_lista_unidad" [src]="product()?.image">
+        <img class="img_lista_unidad" [src]="product()?.image">
+      </div>
+    </div>
+    <div class="derecha">
+      <h2>DETALLE PRODUCTO:</h2>
+      <h3>{{product()?.category}}</h3>
+      <h2>{{product()?.title}}</h2>
+      <p>{{product()?.description}}</p>
+      <hr>
+      <div>
+        <span>{{product()?.price}}</span>
+        <button class="boton" color="primary" mat-raised-button>Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>

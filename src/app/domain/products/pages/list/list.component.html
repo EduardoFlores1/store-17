@@ -1,0 +1,19 @@
+<div class="contenedor">
+  <div class="filtros">
+    <label id="example-radio-group-label">Filtrar por Categorías:</label>
+    @if (categories().length) {
+      <mat-radio-group [value]="categorySelected()" aria-labelledby="example-radio-group-label" class="example-radio-group">
+        <mat-radio-button routerLink="/" color="primary" class="example-radio-button" value="All">All</mat-radio-button>
+        @for (category of categories(); track category) {
+        <mat-radio-button routerLink="/" [queryParams]="{category_name: category}" color="primary" class="example-radio-button">{{category}}</mat-radio-button>
+        }
+      </mat-radio-group>
+    }
+  </div>
+
+  <div class="galeria">
+    @for (product of products(); track $index) {
+      <app-product [product]="product" (addToCart)="addToCart($event)" />
+      }
+  </div>
+</div>

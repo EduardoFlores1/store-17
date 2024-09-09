@@ -1,0 +1,21 @@
+<mat-card class="contenedor">
+  <mat-card-header class="cabecera">
+    <mat-card-title>{{product.title | limitText: 46}}</mat-card-title>
+    <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
+  </mat-card-header>
+  <a class="enlace_imagen" [routerLink]="['product', product.id]">
+    <img class="imagen" mat-card-image [src]="product.image" alt="Photo of a Shiba Inu">
+  </a>
+  <div class="cuerpo">
+    <mat-card-content class="detalle">
+      <div class="rate">
+        <mat-icon>star</mat-icon>
+        <span>{{product.rating.rate}}</span>
+      </div>
+      <span class="price">{{product.price | currency:'S/ ':'symbol':'1.0'}}</span>
+    </mat-card-content>
+    <mat-card-actions class="acciones">
+      <button (click)="addToCartHandler()" class="boton" mat-button>Add to cart</button>
+    </mat-card-actions>
+  </div>
+</mat-card>

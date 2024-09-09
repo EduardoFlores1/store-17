@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Color Theme Swatches in Hex */
+--negro: #121817;
+--azul: #01395C;
+--gris: #7C96A8;
+--verde: #8AC6BF;
+--rosa: #F0E5D6;
+--rojo: #F28C81;
+}
+html, body { height: 100%;}
+body { margin: 0px; font-family: Roboto, "Helvetica Neue", sans-serif;}

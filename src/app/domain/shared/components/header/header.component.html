@@ -1,0 +1,41 @@
+<div class="contenedor" [class.menu_active]="isActiveCart()">
+  <mat-toolbar class="header">
+    <div class="logo">
+      <mat-icon>store</mat-icon>
+      <span class="titulo">VentasApp</span>
+    </div>
+    <div class="menus">
+      <a class="menu" routerLink="/" routerLinkActive="underline" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a class="menu" routerLink="/about" routerLinkActive="underline">About</a>
+      <a class="menu" routerLink="/services" routerLinkActive="underline">Services</a>
+    </div>
+    <div class="cart">
+      <button (click)="toggleMenu()" class="cart_icon" mat-icon-button aria-label="Example icon-button with share icon">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <div class="cart_total">{{cart().length}}</div>
+    </div>
+  </mat-toolbar>
+  
+  <div class="menu_card">
+    <div class="cabecera">
+      <span class="cabecera_titulo">Cart Menu</span>
+      <button (click)="toggleMenu()" mat-icon-button><mat-icon>close</mat-icon></button>
+    </div>
+    <div class="total">
+      <span class="total_titulo">Total:</span>
+      <span>{{total() | currency:'S/ ':'symbol':'1.0'}}</span>
+    </div>
+    <div class="listado">
+      @for (product of cart(); track $index) {
+        <div class="item">
+          <div class="detalle">
+            <img class="imagen" [src]="product.image">
+            <h3 class="titulo">{{product.title | limitText: 18}}</h3>
+          </div>
+          <p class="precio">S/ {{product.price}}</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>
