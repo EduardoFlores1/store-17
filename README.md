@@ -6,6 +6,7 @@ Consumir fake api y diseñar interfaz en angular 17
 
 ![Portada](./src/assets/img/portada.png)
 ![Cart](./src/assets/img/cart.png)
+![Detalle](./src/assets/img/detalle.png)
 
 ## Project Version
 
